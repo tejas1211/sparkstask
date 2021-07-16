@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Insight</title>
+
+    <!-- attach our stylesheet -->
+    <style>
+    /* resetting browser stuff */
+*     {
+  box-sizing: border-box;
+}
+
+body   {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* styling our overall page */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: lightcyan;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #000;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    font-size: 22px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #044dcc;
+    color: white;
+  }
+
+/* logo */
+#logo         {
+  display: inline-block;
+  color: rgb(248, 248, 248);
+  text-decoration: none;
+  width: 49%;
+}
+#logo img    {
+  width: 50px;
+  border-radius: 3px;
+  
+  vertical-align: middle;
+}
+#logo span   {
+  display: inline-block;
+}
+
+/* main navigation */
+nav     {
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+}
+nav ul   {
+  list-style: none;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a    {
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  font-size: 19px;
+  padding: 15px 15px;
+  border-radius: 3px;
+  transition: 0.3s ease all;
+}
+nav ul li a:hover   {
+  background: blueviolet;
+}
+.button{
+  background-color: #FFFF00;
+    border: 3px solid #080000; 
+    color: #000;
+    width: 300px;
+    height: 145px;
+    padding-top:20px;
+    padding-right: 3px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 100px;
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 200px;
+    cursor: pointer;
+
+}
+.button2{
+  background-color: rgb(81, 194, 255);
+    border: 3px solid #080000; 
+    color: #000;
+    width: 300px;
+    height: 145px;
+    padding-top: 20px;
+    padding-right: 3px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 100px;
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 525px;
+    cursor: pointer;
+
+}
+/* styling our footer */
+footer   {
+  background: #222;
+  color: #777;
+  padding: 40px;
+  text-align: center;
+}
+footer img   {
+  display: block;
+  border-radius: 5px;
+  width: 80px;
+  margin: 0 auto 10px;
+}
+
+/* styling our main content */
+.hero           {
+  
+  
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+  background-image: url('https://news.okstate.edu/articles/agricultural-sciences-natural-resources/images/cash_app_banner.jpg');
+
+}
+.hero-content   {
+  color: #000;
+  padding-top: 30px;
+}
+.hero-content h1   {
+  font-size: 100px;
+  margin: 0;
+}
+.hero-content p    {
+  font-size: 50px;
+}
+.hero-content a    {
+  display: inline-block;
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 3px;
+  padding: 15px 30px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+/* basic site sections */
+.site-section   {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.site-section-secondary   {
+    text-align: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+  background-image: url('https://addons-media.operacdn.com/media/CACHE/images/themes/05/144705/1.0-rev1/images/0993404e-79e0-4052-923d-89236e7c102f/ce42ef837a89c852c000eafd63cd0763.jpg');
+
+}
+.site-section-inside   {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-header h2  {
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: rgb(119, 119, 119);
+}
+
+/* feature boxes */
+.feature-box   {
+  display: inline-block;
+  color: black;
+  width: 33%;
+  padding: 20px 30px;
+}
+.feature-box img  {
+  margin-bottom: 12px;
+  width: 80px;
+}
+.feature-box h5   {
+  font-size: 20px;
+  color: rgb(0, 2, 2);
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* testimonial boxes */
+.testimonial-box   {
+  display: inline-block;
+  width: 33%;
+  padding: 20px 30px;
+}
+.testimonial-content   {
+  background: #000;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.testimonial-author img {
+  float: left;
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.testimonial-author h5   {
+  font-size: 18px;
+  margin: 0;
+  padding-top:15px;
+}
+.testimonial-author span {
+  font-size: 14px;
+}
+
+</style>
+</head>
+<body>
+
+    <!-- the header -->
+    <div class="topnav">
+        <a class="active" href="./othlp.html">Home</a>
+        <a href="./cu.html">Transactions</a>
+        <a href="./contactus.html">Contact Us</a>
+      
+        
+      </div>
+      
+
+    <!-- the content -->
+    <main>
+
+        <!-- hero content -->
+        <div class="hero">
+            <!-- content for the hero -->
+            <div class="hero-content">
+                <p style="font-size: 51px; font-weight:bold; text-align:center">SPARKS BANK</p>
+                
+                    
+            </div>
+             
+            <a class="button2" href="./cu.html"><pre style="font-size: 25px;">Transfer Money</pre></a>
+            
+            <div class="site-section-inside">
+
+            <div class="section-header">
+                <h2 style="color: black;"><b>Key Features</b></h2>
+            </div>
+
+            <div class="feature-box">
+                
+              <p style="font-size: 30px; font-weight:bold">Easy to Use</p>
+                <p style="font-weight: bold; font-size:22px">Just think of how easy this is to use. Toddlers can do it. So can you!</p>
+            </div>
+
+            <div class="feature-box">
+                
+                <p style="font-size: 30px; font-weight:bold">Fun to Use</p>
+                <p style="font-weight: bold; font-size:22px">Just think of how easy this is to use. Toddlers can do it. So can you!</p>
+            </div>
+
+            <div class="feature-box">
+                
+              <p style="font-size: 30px; font-weight:bold">You'll Love It</p>
+                <p style="font-weight: bold; font-size:22px">Just think of how easy this is to use. Toddlers can do it. So can you!</p>
+            </div>
+
+        </div>
+        </div>
+
+        <!-- testimonials section -->
+        
+
+    </main>
+   
+    <!-- the footer -->
+    <footer>
+        
+        <span>Made with ❤️ by Sparks Bank<br>Copyright &copy; 2021 </span>
+    </footer>
+
+</body>
+</html>
